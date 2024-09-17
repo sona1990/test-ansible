@@ -1,6 +1,6 @@
 ---
 - name: Test Playbook
-  host: localhost
+  host: all
   tasks:
   - name: Run Test Command
     command: hostname
