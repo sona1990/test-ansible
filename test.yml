@@ -1,7 +1,7 @@
 ---
 - name: Test Playbook
-  hosts: localhost
-  task:
+  host: localhost
+  tasks:
   - name: Run Test Command
     command: hostname
     register: hostname_test
