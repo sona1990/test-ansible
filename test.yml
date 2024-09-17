@@ -1,0 +1,11 @@
+---
+- name: Test Playbook
+  hosts: localhost
+  task:
+  - name: Run Test Command
+    command: hostname
+    register: hostname_test
+  
+  - name: Print Hostname
+    debug:
+      msg: "{{ hostname_test.stdout }}"
