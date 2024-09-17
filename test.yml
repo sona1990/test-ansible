@@ -1,11 +1,11 @@
 ---
 - name: Test Playbook
-  host: all
+  hosts: all
   tasks:
-  - name: Run Test Command
-    command: hostname
-    register: hostname_test
-  
-  - name: Print Hostname
-    debug:
-      msg: "{{ hostname_test.stdout }}"
+    - name: Run Test Command
+      command: hostname
+      register: hostname_test
+
+    - name: Print Hostname
+      debug:
+        msg: "{{ hostname_test.stdout }}"
